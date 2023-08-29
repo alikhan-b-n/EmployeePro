@@ -1,0 +1,14 @@
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/bin/Debug/net7.0/EmployeePro.Dal.deps.json
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/bin/Debug/net7.0/EmployeePro.Dal.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/bin/Debug/net7.0/EmployeePro.Dal.pdb
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.csproj.AssemblyReference.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.AssemblyInfoInputs.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.AssemblyInfo.cs
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.csproj.CoreCompileInputs.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/refint/EmployeePro.Dal.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.pdb
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/ref/EmployeePro.Dal.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/bin/Debug/net7.0/EmployeePro.Dal.runtimeconfig.json
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/obj/Debug/net7.0/EmployeePro.Dal.genruntimeconfig.cache

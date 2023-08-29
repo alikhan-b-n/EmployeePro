@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7c10922b_002D0d0b_002D4335_002Db192_002D94afa489a766/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RepositoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::934C7A84-8289-4775-A291-5C12E0F7DF5D::net7.0::EmployeePro.Dall.Test.RepositoryTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c06e0c3e_002D33eb_002D4a7c_002Da79c_002Dabc191e41d44/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RepositoryTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::934C7A84-8289-4775-A291-5C12E0F7DF5D::net7.0::EmployeePro.Dall.Test.RepositoryTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

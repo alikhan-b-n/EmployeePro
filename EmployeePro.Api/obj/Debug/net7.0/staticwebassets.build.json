@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "cCi4YWv7el6a61I3Qb4yUKdAkrru2zH3EUlqVtt5IR4=",
+  "Source": "EmployeePro.Api",
+  "BasePath": "_content/EmployeePro.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/EmployeePro.Bll.csproj",
+      "Version": 2,
+      "Source": "EmployeePro.Bll",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

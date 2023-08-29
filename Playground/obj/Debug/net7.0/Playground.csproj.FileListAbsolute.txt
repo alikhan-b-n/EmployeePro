@@ -1,0 +1,17 @@
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/bin/Debug/net7.0/Playground
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/bin/Debug/net7.0/Playground.deps.json
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/bin/Debug/net7.0/Playground.runtimeconfig.json
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/bin/Debug/net7.0/Playground.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/bin/Debug/net7.0/Playground.pdb
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.csproj.AssemblyReference.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.AssemblyInfoInputs.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.AssemblyInfo.cs
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.csproj.CoreCompileInputs.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/refint/Playground.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.pdb
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.genruntimeconfig.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/ref/Playground.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/Playground/obj/Debug/net7.0/Playground.csproj.CopyComplete
