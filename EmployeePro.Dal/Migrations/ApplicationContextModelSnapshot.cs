@@ -74,7 +74,6 @@ namespace EmployeePro.Dal.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -122,10 +121,10 @@ namespace EmployeePro.Dal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<DateTime>("CreationDateTime")
+                    b.Property<DateTime?>("Birthday")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("DateOfBirthday")
+                    b.Property<DateTime>("CreationDateTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid?>("DepartmentEntityId")
@@ -194,6 +193,28 @@ namespace EmployeePro.Dal.Migrations
                     b.HasIndex("EmployeeEntityId");
 
                     b.ToTable("ExperienceEntities");
+                });
+
+            modelBuilder.Entity("EmployeePro.Dal.Entities.HrEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreationDateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HrEntities");
                 });
 
             modelBuilder.Entity("EmployeePro.Dal.Entities.LanguageEntity", b =>

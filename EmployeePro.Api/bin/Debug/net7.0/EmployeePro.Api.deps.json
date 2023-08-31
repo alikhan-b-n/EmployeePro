@@ -9,6 +9,7 @@
       "EmployeePro.Api/1.0.0": {
         "dependencies": {
           "EmployeePro.Bll": "1.0.0",
+          "EmployeePro.Contract": "1.0.0",
           "EmployeePro.Dal": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Microsoft.EntityFrameworkCore.Design": "7.0.10",
@@ -359,6 +360,7 @@
       "EmployeePro.Bll/1.0.0": {
         "dependencies": {
           "BCrypt.Net": "0.1.0",
+          "EmployeePro.Contract": "1.0.0",
           "EmployeePro.Dal": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.10",
           "Newtonsoft.Json": "13.0.3",
@@ -366,6 +368,11 @@
         },
         "runtime": {
           "EmployeePro.Bll.dll": {}
+        }
+      },
+      "EmployeePro.Contract/1.0.0": {
+        "runtime": {
+          "EmployeePro.Contract.dll": {}
         }
       },
       "EmployeePro.Dal/1.0.0": {
@@ -694,6 +701,11 @@
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
     },
     "EmployeePro.Bll/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmployeePro.Contract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

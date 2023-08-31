@@ -29,11 +29,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\EmployeePro.Bll\EmployeePro.Bll.csproj" />
+      <ProjectReference Include="..\EmployeePro.Contract\EmployeePro.Contract.csproj" />
       <ProjectReference Include="..\EmployeePro.Dal\EmployeePro.Dal.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Response" />
     </ItemGroup>
 
 </Project>

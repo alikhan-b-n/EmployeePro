@@ -1,4 +1,5 @@
 using EmployeePro.Bll.Dtos;
+using EmployeePro.Bll.Services.Interfaces;
 using EmployeePro.Dal.Entities;
 using EmployeePro.Dal.Entities.BridgeTables;
 using EmployeePro.Dal.Providers;
@@ -6,7 +7,7 @@ using EmployeePro.Dal.Providers.Interfaces;
 
 namespace EmployeePro.Bll.Services;
 
-public class EmployeeCreator : IEmployeeCreatorAndUpdater
+public class EmployeeCreator : IEmployeeCreator
 {
     private readonly ILinkedinService _linkedinService;
     private readonly ICrudProvider<EmployeeEntity> _employeeProvider;
@@ -14,16 +15,18 @@ public class EmployeeCreator : IEmployeeCreatorAndUpdater
     private readonly ICrudProvider<EducationEntity> _educationProvider;
     private readonly ICrudProvider<SkillEntity> _skillProvider;
     private readonly ICrudProvider<LanguageEntity> _languageProvider;
-    private readonly IAuthentificationService _authentificationService;
+    private readonly ITokenService _tokenService;
     private readonly ICrudProvider<EmployeeLanguageEntity> _employeeLanguageProvider;
     private readonly ICrudProvider<EmployeeSkillEntity> _employeeSkillProvider;
+    private readonly IEmployeeAuth _employeeAuth;
 
     public EmployeeCreator(ILinkedinService linkedinService, ICrudProvider<EmployeeEntity> employeeProvider,
         ICrudProvider<ExperienceEntity> experienceProvider, ICrudProvider<EducationEntity> educationProvider,
         ICrudProvider<SkillEntity> skillProvider, ICrudProvider<LanguageEntity> languageProvider,
-        IAuthentificationService authentificationService,
         ICrudProvider<EmployeeLanguageEntity> employeeLanguageProvider,
-        ICrudProvider<EmployeeSkillEntity> employeeSkillProvider)
+        ICrudProvider<EmployeeSkillEntity> employeeSkillProvider,
+        IEmployeeAuth employeeAuth
+        )
     {
         _linkedinService = linkedinService;
         _employeeProvider = employeeProvider;
@@ -31,9 +34,9 @@ public class EmployeeCreator : IEmployeeCreatorAndUpdater
         _educationProvider = educationProvider;
         _skillProvider = skillProvider;
         _languageProvider = languageProvider;
-        _authentificationService = authentificationService;
         _employeeLanguageProvider = employeeLanguageProvider;
         _employeeSkillProvider = employeeSkillProvider;
+        _employeeAuth = employeeAuth;
     }
     
     public async Task CreateEmployee(string url, string email)
@@ -45,7 +48,7 @@ public class EmployeeCreator : IEmployeeCreatorAndUpdater
             Email = email,
             Fullname = linkedinResponse.FullName,
             Summary = linkedinResponse.Summary,
-            PasswordHash = _authentificationService.GenerateHashPassword(email, linkedinResponse.FullName),
+            PasswordHash = _employeeAuth.GenerateHashPassword(email, linkedinResponse.FullName),
             ProfilePicUrl = linkedinResponse.ProfilePicUrl
         };
         await _employeeProvider.Create(employeeEntity);

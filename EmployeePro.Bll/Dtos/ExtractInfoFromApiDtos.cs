@@ -17,7 +17,7 @@ public class TotalInfoFromApis
     
     public List<Experience> Experiences { get; set; }
 
-    public RockDevsLinkedInApiDto Skills { get; set; }
+    public RockDevsLinkedInApiDto? Skills { get; set; }
 }
 public class ApisWorldLinkedinApiDto
 {
@@ -62,11 +62,11 @@ public class Education
 
     [JsonProperty("field_of_study")]
     [JsonPropertyName("field_of_study")]
-    public object FieldOfStudy { get; set; }
+    public string FieldOfStudy { get; set; }
 
     [JsonProperty("degree_name")]
     [JsonPropertyName("degree_name")]
-    public object DegreeName { get; set; }
+    public string DegreeName { get; set; }
 
     [JsonProperty("school")]
     [JsonPropertyName("school")]
@@ -93,15 +93,15 @@ public class Experience
 
     [JsonProperty("company")]
     [JsonPropertyName("company")]
-    public string Company { get; set; }
+    public string? Company { get; set; }
 
     [JsonProperty("title")]
     [JsonPropertyName("title")]
-    public string Title { get; set; }
+    public string? Title { get; set; }
 
     [JsonProperty("description")]
     [JsonPropertyName("description")]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 }
 
 public class WhenAt

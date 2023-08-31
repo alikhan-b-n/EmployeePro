@@ -54,3 +54,5 @@
 /Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Api/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Api/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Api/bin/Debug/net7.0/System.CodeDom.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Api/bin/Debug/net7.0/EmployeePro.Contract.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Api/bin/Debug/net7.0/EmployeePro.Contract.pdb

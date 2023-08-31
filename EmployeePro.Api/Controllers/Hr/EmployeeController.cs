@@ -1,11 +1,14 @@
 using EmployeePro.Bll;
 using EmployeePro.Bll.Dtos;
 using EmployeePro.Bll.Services;
-using EmployeePro.Controllers.Hr.Params;
+using EmployeePro.Bll.Services.Interfaces;
+using EmployeePro.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeePro.Controllers.Hr;
 
+[Authorize(Policy = "HR")]
 public class EmployeeController : ControllerBase
 {
     private readonly IEmployeeManager _employeeManager;
@@ -18,7 +21,8 @@ public class EmployeeController : ControllerBase
     [HttpPost("api/hr/employees")]
     public async Task<IActionResult> CreateEmployeeProfile([FromBody] CreateViewModel createViewModel)
     {
-        if (string.IsNullOrWhiteSpace(createViewModel.UrlOfLinkedinEmployee) || string.IsNullOrWhiteSpace(createViewModel.Email))
+        if (string.IsNullOrWhiteSpace(createViewModel.UrlOfLinkedinEmployee) ||
+            string.IsNullOrWhiteSpace(createViewModel.Email))
         {
             return BadRequest("Url and Email are required.");
         }
@@ -54,7 +58,8 @@ public class EmployeeController : ControllerBase
     }
 
     [HttpPatch("api/hr/employees/{id:guid}")]
-    public async Task<IActionResult> ChangeEmployeeProfile([FromBody] EmployeeViewModel employeeViewModel, [FromRoute] Guid id)
+    public async Task<IActionResult> ChangeEmployeeProfile([FromBody] EmployeeViewModel employeeViewModel,
+        [FromRoute] Guid id)
     {
         var employeeDto = new EmployeeDto
         {
@@ -64,10 +69,20 @@ public class EmployeeController : ControllerBase
             DepartmentId = employeeViewModel.DepartmentId,
             Skills = employeeViewModel.Skills,
             Languages = employeeViewModel.Languages,
-            Id = id
+            Id = id,
+            Birthday = employeeViewModel.Birthday
         };
 
         await _employeeManager.UpdateEmployeeProfile(employeeDto);
+        return NoContent();
+    }
+
+    [HttpPost("api/hr/employees/email_broadcast")]
+    public async Task<IActionResult> SendEmailToEmployees(
+        [FromBody] EmailMessageViewModel emailMessageViewModel)
+    {
+        await _employeeManager
+            .SendEmailToAllEmployee(emailMessageViewModel.Message, emailMessageViewModel.Subject);
         return NoContent();
     }
 }

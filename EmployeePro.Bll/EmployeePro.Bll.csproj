@@ -26,6 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\EmployeePro.Contract\EmployeePro.Contract.csproj" />
       <ProjectReference Include="..\EmployeePro.Dal\EmployeePro.Dal.csproj" />
     </ItemGroup>
 

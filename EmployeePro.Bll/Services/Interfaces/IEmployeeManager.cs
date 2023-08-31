@@ -1,6 +1,6 @@
 using EmployeePro.Bll.Dtos;
 
-namespace EmployeePro.Bll.Services;
+namespace EmployeePro.Bll.Services.Interfaces;
 
 public interface IEmployeeManager
 {
@@ -9,4 +9,6 @@ public interface IEmployeeManager
     public Task UpdateEmployeeProfile(EmployeeDto employeeDto);
     public Task<List<EmployeeDto>> GetAllEmployeeProfiles();
     public Task<EmployeeDto> GetByIdEmployeeProfile(Guid id);
+    public Task SendEmailToAllEmployee(string message, string subject);
+    public Task SendHappyBirthday(string receiverEmail);
 }

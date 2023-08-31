@@ -711,6 +711,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "BCrypt.Net": "0.1.0",
+          "EmployeePro.Contract": "1.0.0",
           "EmployeePro.Dal": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.10",
           "Newtonsoft.Json": "13.0.3",
@@ -725,6 +726,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "EmployeePro.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/EmployeePro.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeePro.Contract.dll": {}
+        }
       },
       "EmployeePro.Dal/1.0.0": {
         "type": "project",
@@ -2208,6 +2219,11 @@
       "path": "../EmployeePro.Bll/EmployeePro.Bll.csproj",
       "msbuildProject": "../EmployeePro.Bll/EmployeePro.Bll.csproj"
     },
+    "EmployeePro.Contract/1.0.0": {
+      "type": "project",
+      "path": "../EmployeePro.Contract/EmployeePro.Contract.csproj",
+      "msbuildProject": "../EmployeePro.Contract/EmployeePro.Contract.csproj"
+    },
     "EmployeePro.Dal/1.0.0": {
       "type": "project",
       "path": "../EmployeePro.Dal/EmployeePro.Dal.csproj",
@@ -2217,6 +2233,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "EmployeePro.Bll >= 1.0.0",
+      "EmployeePro.Contract >= 1.0.0",
       "EmployeePro.Dal >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10",
@@ -2254,6 +2271,9 @@
           "projectReferences": {
             "/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/EmployeePro.Bll.csproj": {
               "projectPath": "/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/EmployeePro.Bll.csproj"
+            },
+            "/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Contract/EmployeePro.Contract.csproj": {
+              "projectPath": "/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Contract/EmployeePro.Contract.csproj"
             },
             "/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/EmployeePro.Dal.csproj": {
               "projectPath": "/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Dal/EmployeePro.Dal.csproj"

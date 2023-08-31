@@ -16,7 +16,7 @@ public class DepartmentManager : IDepartmentManager
         _departmentProvider = departmentProvider;
         _employeeProvider = employeeProvider;
     }
-
+    
     public async Task CreateDepartment(DepartmentDto departmentDto)
     {
         await _departmentProvider.Create(new DepartmentEntity
@@ -46,6 +46,11 @@ public class DepartmentManager : IDepartmentManager
     public async Task ChangeDepartment(DepartmentDto? departmentDto)
     {
         var departmentEntity = await _departmentProvider.GetById(departmentDto?.Id);
+        if (departmentEntity == null)
+        {
+            return;
+        }
+        
         departmentEntity.Title = departmentDto?.Title ?? departmentEntity.Title;
         await _departmentProvider.Update(departmentEntity);
     }

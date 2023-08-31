@@ -28,7 +28,7 @@ public class Repository<TEntity> : ICrudProvider<TEntity> where TEntity : BaseEn
 
     public async Task<TEntity?> GetById(Guid? id)
     {
-        var entity = id.Equals(null) ? null : await _dbSet.FirstAsync(x => x.Id == id);
+        var entity =  await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
         return entity;
     }
 
@@ -39,7 +39,7 @@ public class Repository<TEntity> : ICrudProvider<TEntity> where TEntity : BaseEn
 
     public async Task Update(TEntity entity)
     {
-        var result = _dbSet.Any(x => x.Id == entity.Id)
+        _ = _dbSet.Any(x => x.Id == entity.Id)
             ? _context.Entry(entity).State = EntityState.Modified
             : throw new ArgumentException();
         await _context.SaveChangesAsync();

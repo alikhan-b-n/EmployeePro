@@ -1,10 +1,12 @@
 using EmployeePro.Bll.Dtos;
 using EmployeePro.Bll.Services.Interfaces;
-using EmployeePro.Controllers.Hr.Params;
+using EmployeePro.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeePro.Controllers.Hr;
 
+[Authorize(Policy = "HR")]
 public class DepartmentController : ControllerBase
 {
     private readonly IDepartmentManager _departmentManager;

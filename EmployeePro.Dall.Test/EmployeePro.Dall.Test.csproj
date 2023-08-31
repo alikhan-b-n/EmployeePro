@@ -27,6 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\EmployeePro.Bll\EmployeePro.Bll.csproj" />
       <ProjectReference Include="..\EmployeePro.Dal\EmployeePro.Dal.csproj" />
     </ItemGroup>
 

@@ -11,4 +11,7 @@ public class EmployeeDto
     public List<string>? Languages { get; set; }
     public Guid Id { get; set; }
     public string? Department { get; set; }
+    public DateTime? Birthday { get; set; }
+    public List<ExperienceDto>? Experiences { get; set; }
+    public List<EducationDto>? Educations { get; set; }
 }

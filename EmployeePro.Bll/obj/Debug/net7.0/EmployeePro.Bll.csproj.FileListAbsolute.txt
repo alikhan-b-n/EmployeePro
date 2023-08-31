@@ -23,3 +23,5 @@
 /Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/obj/Debug/net7.0/ref/EmployeePro.Bll.dll
 /Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/bin/Debug/net7.0/EmployeePro.Bll.runtimeconfig.json
 /Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/obj/Debug/net7.0/EmployeePro.Bll.genruntimeconfig.cache
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/bin/Debug/net7.0/EmployeePro.Contract.dll
+/Users/alikhanbalkhashbayev/RiderProjects/EmployeePro/EmployeePro.Bll/bin/Debug/net7.0/EmployeePro.Contract.pdb

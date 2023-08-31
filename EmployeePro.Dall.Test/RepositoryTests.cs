@@ -24,7 +24,7 @@ public class RepositoryTests
     }
 
     [Fact]
-    public async Task GetAll()
+    public async Task GetAll_ShouldGetAllEntities_PositiveTest()
     {
         // Arrange
         DepartmentEntity[] listToAdd =
@@ -45,7 +45,7 @@ public class RepositoryTests
     }
 
     [Fact]
-    public async Task GetById()
+    public async Task GetById_ShouldGetEntityByItsId_PositiveTest()
     {
         // Arrange
         var expected = new DepartmentEntity { Title = "Unsullied" };
@@ -60,7 +60,7 @@ public class RepositoryTests
     }
 
     [Fact]
-    public async Task Create()
+    public async Task Create_ShouldCreateEntity_PositiveTest()
     {
         // Arrange
         var expected = new DepartmentEntity { Title = "Unsullied" };
@@ -76,7 +76,7 @@ public class RepositoryTests
     }
 
     [Fact]
-    public async Task Update()
+    public async Task Update_ShouldUpdateEntity_PositiveTest()
     {
         // Arrange
         var initial = new DepartmentEntity { Title = "Unsullied" };
@@ -95,11 +95,10 @@ public class RepositoryTests
             .FirstAsync(x => x.Id == initial.Id);
 
         afterChangeActual.Should().BeEquivalentTo(afterChangeExpected);
-
     }
 
     [Fact]
-    public async Task Delete()
+    public async Task Delete_ShouldDeleteEntityByItsId_PositiveTest()
     {
         // Arrange
         var initial = new DepartmentEntity { Title = "Unsullied" };

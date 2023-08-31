@@ -30,7 +30,7 @@ public class LinkedinService : ILinkedinService
             ProfilePicUrl = profileData.ProfilePicUrl,
             Summary = profileData.Summary,
             Languages = profileData.Languages,
-            Skills = skills,
+            Skills = skills ?? null,
             Experiences = profileData.Experiences,
             Education = profileData.Education
         };

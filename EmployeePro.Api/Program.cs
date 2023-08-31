@@ -1,7 +1,10 @@
+using System.Security.Claims;
 using System.Text;
 using EmployeePro.Bll;
 using EmployeePro.Bll.Services;
+using EmployeePro.Bll.Services.Authentications;
 using EmployeePro.Bll.Services.Interfaces;
+using EmployeePro.Contract.Options;
 using EmployeePro.Dal;
 using EmployeePro.Dal.Entities;
 using EmployeePro.Dal.Entities.BridgeTables;
@@ -10,6 +13,7 @@ using EmployeePro.Dal.Providers.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using RetAil;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationContext>(options =>
@@ -26,11 +30,15 @@ builder.Services.AddScoped<ICrudProvider<DepartmentEntity>, Repository<Departmen
 builder.Services.AddScoped<ICrudProvider<LanguageEntity>, Repository<LanguageEntity>>();
 builder.Services.AddScoped<ICrudProvider<EmployeeSkillEntity>, Repository<EmployeeSkillEntity>>();
 builder.Services.AddScoped<ICrudProvider<EmployeeLanguageEntity>, Repository<EmployeeLanguageEntity>>();
+builder.Services.AddScoped<ICrudProvider<HrEntity>, Repository<HrEntity>>();
 builder.Services.AddScoped<ILinkedinService, LinkedinService>();
-builder.Services.AddScoped<IAuthentificationService, AuthentificationService>();
-builder.Services.AddScoped<IEmployeeCreatorAndUpdater, EmployeeCreator>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IEmployeeCreator, EmployeeCreator>();
 builder.Services.AddScoped<IEmployeeManager, EmployeeManager>();
 builder.Services.AddScoped<IDepartmentManager, DepartmentManager>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IEmployeeAuth, EmployeeAuth>();
+builder.Services.AddScoped<IHrAuth, HrAuth>();
 
 var secrets = builder.Configuration.GetSection("SecretOptions");
 
@@ -52,6 +60,20 @@ builder.Services.AddAuthentication(x =>
         ValidateAudience = false,
     };
 });
+
+builder.Services.AddAuthorization(x => 
+    x.AddPolicy("HR", x =>
+    {
+        x.RequireClaim(ClaimTypes.Actor, "HR");
+    }));
+
+builder.Services.AddAuthorization(x => 
+    x.AddPolicy("Employee", x =>
+    {
+        x.RequireClaim(ClaimTypes.Actor, "Employee");
+    }));
+
+ConfigureServicesSwagger.ConfigureServices(builder.Services);
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
